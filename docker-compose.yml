@@ -1,0 +1,27 @@
+services:
+  server:
+    image: go-ecommerce:0.1
+    ports:
+      - "8080:8080"
+  mysql:
+    image: mysql:9.1.0
+    ports:
+      - "3433:3433"
+    environment:
+      - MYSQL_ROOT_PASSWORD=pass1234
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "3434:3434"
+    environment:
+      - MONGO_USER=root
+      - MONGO_PASSWORD=pass1234
+  redis:
+    image: redis:7.4.1
+    ports:
+      - "3435:3435"
+
+volumes:
+  mysql-vol:
+  mongodb-vol:
+  redis-vol:
