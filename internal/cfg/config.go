@@ -18,6 +18,11 @@ type Config struct {
 		Info                       string
 		HandlerResponseTimeoutInMs int
 	}
+
+	Mongo struct {
+		Uri string
+		Db  string
+	}
 }
 
 func NewConfig(path string) (Config, error) {
