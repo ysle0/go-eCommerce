@@ -1,0 +1,19 @@
+version: "2"
+cloud:
+  organization: ""
+  project: ""
+  hostname: ""
+servers: [ ]
+sql:
+  - engine: "mysql"
+    queries: "query.sql"
+    schema: "schema.sql"
+    gen:
+      go:
+        package: "tutorial"
+        out: "tutorial"
+overrides:
+  go: null
+plugins: [ ]
+rules: [ ]
+options: { }
